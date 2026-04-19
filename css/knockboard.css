@@ -292,7 +292,18 @@ section {
 footer {
   background-color: #111;
   text-align: center;
-  padding: 40px 0;
+  padding: 60px 0 30px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.dockr {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.nano {
   color: #666;
   font-size: 0.8rem;
 }
