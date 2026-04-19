@@ -1,0 +1,314 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.multimedia {
+  display: flex;
+  justify-content: center; /* centra el conjunto */
+  align-items: center;
+  gap: 60px; /* espacio entre ambos */
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Ajuste de iframes */
+.multimedia .container {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  padding: 40px 0;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/hero.jpg") center/cover no-repeat;
+  transform: scale(1.2);
+  animation: zoomHero 20s infinite alternate ease-in-out;
+  filter: brightness(0.4);
+}
+
+@keyframes zoomHero {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1.35);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero img {
+  width: 180px;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  color: #bbb;
+}
+
+/* ================= ANIMACIONES ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= LINKS ================= */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.links a {
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.links a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20px; /* 👈 hace que quede “cortada” */
+  width: 120px;
+  height: 200%;
+  background: url("../multimedia/knockboard/KB.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.2; /* 👈 clave: muy sutil */
+  z-index: 0;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.links a:hover::before {
+  opacity: 1;
+  transition: 1s;
+}
+
+.links a:hover::after {
+  transform: translateX(100%);
+  transition: 0.6s;
+}
+
+.links a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* ================= GALERÍA ================= */
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  perspective: 1000px;
+}
+
+.gallery img {
+  height: 200px;
+  border-radius: 15px;
+  transform: rotateY(15deg) scale(0.95);
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: rotateY(0deg) scale(1.05);
+}
+
+/* ================= INTEGRANTES ================= */
+
+.members {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.member {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: 0.4s;
+}
+
+.member:hover img {
+  transform: scale(1.08);
+}
+
+.member-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.member:hover .member-info {
+  opacity: 1;
+}
+
+/* Logo central */
+.members::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("../multimedia/knockboard/Icono\ XL.png") center center
+    no-repeat;
+  background-size: 180px;
+
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  text-align: center;
+  background-color: #111;
+}
+.cta-content {
+  margin: 20px;
+}
+
+.cta a {
+  padding: 14px 30px;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .multimedia {
+    flex-direction: column;
+  }
+
+  .members {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
