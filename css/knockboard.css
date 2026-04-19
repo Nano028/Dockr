@@ -134,6 +134,7 @@ section {
 
 .links a {
   padding: 16px;
+  margin-top: 10px;
   border-radius: 12px;
   text-align: center;
   background: linear-gradient(145deg, #1a1a1a, #111);
