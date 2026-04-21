@@ -1,44 +1,3 @@
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  background: #0a0a0a;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-.multimedia {
-  display: flex;
-  justify-content: center; /* centra el conjunto */
-  align-items: center;
-  gap: 60px; /* espacio entre ambos */
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Ajuste de iframes */
-.multimedia .container {
-  width: 400px;
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section {
-  padding: 40px 0;
-}
-
 /* ================= HERO ================= */
 
 .hero {
@@ -55,7 +14,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../multimedia/knockboard/KB.png") center/cover no-repeat;
+  background: url("../multimedia/knockboard/KB.png") center/contain no-repeat;
   transform: scale(1.2);
   animation: zoomHero 20s infinite alternate ease-in-out;
   filter: brightness(0.4);
@@ -260,11 +219,9 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-
   background: url("../multimedia/knockboard/Icono\ XL.png") center center
     no-repeat;
   background-size: 180px;
-
   opacity: 0.5;
   z-index: 0;
 }

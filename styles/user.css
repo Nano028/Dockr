@@ -1,0 +1,97 @@
+/* ================= RESET BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  padding: 40px 0;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../multimedia/knockboard/KB.png") center/contain no-repeat;
+  transform: scale(1.2);
+  animation: zoomHero 20s infinite alternate ease-in-out;
+  filter: brightness(0.4);
+}
+
+@keyframes zoomHero {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1.35);
+  }
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero img {
+  width: 180px;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  color: #bbb;
+}
+
+.multimedia {
+  display: flex;
+  justify-content: center; /* centra el conjunto */
+  align-items: center;
+  gap: 60px; /* espacio entre ambos */
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Ajuste de iframes */
+.multimedia .container {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+}/*# sourceMappingURL=user.css.map */

@@ -1,0 +1,16 @@
+.multimedia {
+  display: flex;
+  justify-content: center; /* centra el conjunto */
+  align-items: center;
+  gap: 60px; /* espacio entre ambos */
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Ajuste de iframes */
+.multimedia .container {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+}
