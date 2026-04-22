@@ -47,7 +47,7 @@ section {
   background: var(--hero-bg) center/contain no-repeat;
   transform: scale(1.2);
   animation: zoomHero 20s infinite alternate ease-in-out;
-  filter: brightness(0.4);
+  filter: brightness(0.17);
 }
 
 @keyframes zoomHero {
