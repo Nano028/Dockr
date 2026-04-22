@@ -1,3 +1,4 @@
-@use "./_resets.scss" as *;
-@use "./_hero.scss" as *;
-@use "./multimedia.scss" as *;
+@use "./base/resets" as *;
+@use "./base/variables" as *;
+@use "./components/hero" as *;
+@use "./themes/themes" as *;
