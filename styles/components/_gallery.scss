@@ -1,0 +1,40 @@
+/* ================= GALERÍA ================= */
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  scroll-snap-type: x mandatory;
+}
+
+/* scrollbar más prolijo (opcional pero suma) */
+.gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* imágenes */
+.gallery img {
+  flex: 0 0 auto;
+  height: 200px;
+  border-radius: 15px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+  scroll-snap-align: center;
+}
+
+/* hover Dockr */
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}

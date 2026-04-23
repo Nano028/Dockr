@@ -1,0 +1,71 @@
+/* ================= LINKS ================= */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.links a {
+  position: relative;
+  padding: 18px;
+  border-radius: 14px;
+
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.links a span {
+  position: relative;
+  z-index: 2;
+}
+
+.links a img {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 80%;
+  opacity: 0.08;
+  transition: 0.4s ease;
+
+  pointer-events: none;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+
+  transform: translateX(-100%);
+}
+
+.links a:hover {
+  transform: translateY(-3px);
+}
+
+.links a:hover::after {
+  transform: translateX(100%);
+  transition: 0.6s;
+}
+
+.links a:hover img {
+  opacity: 0.7;
+}
