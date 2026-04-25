@@ -110,62 +110,86 @@
           <img src="./assets/gallery/4.jpg" />
         </div>
 
-        <div class="carousel-item active">
+        <div class="carousel-item">
           <img src="./assets/gallery/5.jpeg" />
         </div>
 
-        <div class="carousel-item active">
+        <div class="carousel-item">
           <img src="./assets/gallery/6.jpeg" />
         </div>
       </div>
     </section>
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    </section>
 
-    <!-- INTEGRANTES -->
-    <section class="container fade">
-      <div class="members">
-        <div class="member">
-          <img src="./multimedia/knockboard/integrantes/Gera.jpg" />
-          <div class="member-info">Gerardo (Gera) Techera - Voz</div>
+    <!-- CARDS -->
+    <section class="cards">
+      <img src="galeria/Nombre.png" class="bg-logo" alt="" />
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/cards/1.jpg" alt="Gerardo Techera" />
+          </div>
+          <div class="card-back">
+            <div class="info">Voz - Gerardo Techera</div>
+          </div>
         </div>
+      </div>
 
-        <div class="member">
-          <img src="./multimedia/knockboard/integrantes/Martin.jpeg" />
-          <div class="member-info">Martín (Nano) Gonzalez - Guitarra</div>
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/cards/2.jpeg" alt="Martín Gonzalez" />
+          </div>
+          <div class="card-back">
+            <div class="info">Guitarra - Martín Gonzalez</div>
+          </div>
         </div>
+      </div>
 
-        <div class="member">
-          <img src="./multimedia/knockboard/integrantes/Chelo.jpeg" />
-          <div class="member-info">Marcelo (Chelo) Mimbacas - Bajo</div>
+      <div class="logo-center">
+        <img src="assets/logo.png" alt="Knockboard" />
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/cards/3.jpeg" alt="Marcelo Mimbacas" />
+          </div>
+          <div class="card-back">
+            <div class="info">Bajo - Marcelo Mimbacas</div>
+          </div>
         </div>
+      </div>
 
-        <div class="member">
-          <img src="./multimedia/knockboard/integrantes/Ale.jpg" />
-          <div class="member-info">Alejandro (Ale) Chacón - Batería</div>
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/cards/4.jpg" alt="Alejandro Chacón" />
+          </div>
+          <div class="card-back">
+            <div class="info">Batería - Alejandro Chacón</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta fade">
-      <p class="cta-content">¿Querés tu propio Dockr?</p>
-      <a class="cta-content" href="../pages/mainCreateDockr">Crear el mío</a>
-    </section>
+    <section class="cta">
+      <div class="cta-client">
+        <h2>Seguinos y enterate de lo que se viene.</h2>
+        <a href="https://www.instagram.com/knockboard_official"
+          >Seguir a Knockboard</a
+        >
+      </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <p class="footer-text dockr">Hecho con Dockr</p>
-      <p class="footer-text nano">Powered by Nano Web Design</p>
-    </footer>
-    <script src="../js/user.js"></script>
+      <div class="cta-product">
+        <p>Este sitio funciona con <strong>Dockr</strong>.</p>
+        <a href="../index.html">Quiero mi Dockr</a>
+      </div>
+
+      <div class="cta-brand">
+        <span>Creado por Nano Web Design</span>
+      </div>
+    </section>
   </body>
 </html>

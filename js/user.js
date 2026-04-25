@@ -75,3 +75,9 @@ carousel.addEventListener("mouseleave", startCarousel);
 // ---------- INIT ----------
 updateCarousel();
 startCarousel();
+
+// ------------------- CARDS -------------------//
+/* CARDS */
+function flip(card) {
+  card.classList.toggle("active");
+}
