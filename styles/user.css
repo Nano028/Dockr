@@ -71,7 +71,7 @@ body {
   position: relative;
   width: 180px;
   height: 180px;
-  margin: 0 auto 10px;
+  margin: 0 auto 100px;
 }
 
 .hero-img {
@@ -136,7 +136,7 @@ body {
 
 .links a img {
   position: absolute;
-  right: 5px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   height: 80%;
