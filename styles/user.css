@@ -28,7 +28,7 @@ body {
 :root {
   --bg: #0a0a0a;
   --text: #ffffff;
-  --hero-bg: url("../../multimedia/defaulthero.png");
+  --hero-bg: none;
   --hero-size: 25vw;
 }
 
@@ -71,7 +71,7 @@ body {
   position: relative;
   width: 180px;
   height: 180px;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
 }
 
 .hero-img {
@@ -98,7 +98,7 @@ body {
   }
 }
 .hero h1 {
-  margin-top: 30%;
+  margin-top: 40%;
   font-size: 3rem;
 }
 
@@ -136,7 +136,7 @@ body {
 
 .links a img {
   position: absolute;
-  right: -10px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   height: 80%;
@@ -277,6 +277,7 @@ body {
 }
 
 .bg-logo {
+  display: none;
   position: absolute;
   inset: 0;
   margin: auto;
@@ -393,6 +394,18 @@ body {
   .card {
     height: 240px;
   }
+  .bg-logo {
+    display: inline;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 55%;
+    max-width: 500px;
+    opacity: 0.05;
+    filter: blur(2px);
+    pointer-events: none;
+    z-index: 1;
+  }
 }
 /* ================= CTA ================= */
 .cta {
@@ -455,13 +468,13 @@ body.theme-knockboard {
   --accent: #000000;
   --text: #f8f8f8;
   --bg: #000000;
-  --hero-bg: url("../../knockboard/assets/KB.png");
+  --hero-bg: url("../knockboard/assets/KB.png");
   --hero-size: 25vw;
 }
 
 /* Manu Gonzalez */
 body.theme-manugonzalez {
   --accent: #00ff99;
-  --hero-bg: url("../../manugonzalez/assets/hero.jpeg");
+  --hero-bg: url("../manugonzalez/assets/hero.jpeg");
   --hero-size: 30vw;
 }/*# sourceMappingURL=user.css.map */

@@ -13,6 +13,7 @@
 }
 
 .bg-logo {
+  display: none;
   position: absolute;
   inset: 0;
   margin: auto;
@@ -131,5 +132,18 @@
 
   .card {
     height: 240px;
+  }
+
+  .bg-logo {
+    display: inline;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 55%;
+    max-width: 500px;
+    opacity: 0.05;
+    filter: blur(2px);
+    pointer-events: none;
+    z-index: 1;
   }
 }
