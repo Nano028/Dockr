@@ -2,6 +2,7 @@
 
 .hero {
   height: 100vh;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +25,7 @@
   from {
     transform: scale(1.2);
   }
+
   to {
     transform: scale(1.35);
   }
@@ -32,43 +34,40 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  animation: fadeUp 1s ease forwards;
 }
+
 .hero-images {
   position: relative;
   width: 180px;
   height: 180px;
   margin: 0 auto 20px;
-  transform: translateX(-50%);
 }
 
-.hero img {
-  width: 180px;
-  margin-bottom: 20px;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 .hero-img {
+  top: 70%;
   position: absolute;
-  transform: translate(-50%, -50%) scale(0.95);
+  width: 180px;
   opacity: 0;
+  transform: translate(-50%, -50%) scale(0.95);
   transition:
     opacity 1s ease,
     transform 1s ease;
+  animation: float 4s ease-in-out infinite;
 }
 
 .hero-img.active {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
 }
 
 .hero h1 {
