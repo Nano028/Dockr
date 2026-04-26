@@ -1,23 +1,24 @@
 /* ===============================
-   DOCKR - SCRIPT.JS
+   DOCKR - SCRIPT.JS (MEJORADO)
 =============================== */
 
 /* Reveal on scroll */
 const revealItems = document.querySelectorAll(
-  ".pain-card, .benefit-card, .case-card, .price-card, .steps-grid article, .contact-form, .contact-copy"
+  ".pain-card, .benefit-card, .case-card, .price-card, .steps-grid article, .contact-form, .contact-copy",
 );
 
 const observer = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 80);
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.15 }
+  {
+    threshold: 0.15,
+  },
 );
 
 revealItems.forEach((item) => {
@@ -25,7 +26,7 @@ revealItems.forEach((item) => {
   observer.observe(item);
 });
 
-/* Header shadow on scroll */
+/* Header border on scroll */
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
@@ -36,13 +37,45 @@ window.addEventListener("scroll", () => {
   }
 });
 
-/* Fake submit */
+/* Formulario profesional temporal */
 const form = document.querySelector(".contact-form");
 
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Gracias. Tu solicitud fue enviada.");
-    form.reset();
+
+    const button = form.querySelector("button");
+    const originalText = button.innerText;
+
+    button.innerText = "Enviado ✓";
+    button.disabled = true;
+
+    setTimeout(() => {
+      button.innerText = originalText;
+      button.disabled = false;
+      form.reset();
+    }, 2200);
   });
+}
+
+/* =====================================
+   HERO MOCKUP THEMES ROTATIVOS
+===================================== */
+
+const phoneMock = document.querySelector(".phone-front");
+
+if (phoneMock) {
+  const themes = ["theme-dark", "theme-light", "theme-blue"];
+  let current = 0;
+
+  phoneMock.classList.add(themes[current]);
+
+  setInterval(() => {
+    phoneMock.classList.remove(...themes);
+
+    current++;
+    if (current >= themes.length) current = 0;
+
+    phoneMock.classList.add(themes[current]);
+  }, 3200);
 }
