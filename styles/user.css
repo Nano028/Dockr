@@ -32,6 +32,10 @@ body {
   --hero-size: 25vw;
 }
 
+body.theme-knockboard {
+  --hero-bg: url("../../knockboard/assets/KB.png");
+}
+
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
