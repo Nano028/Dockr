@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ================= RESET BASE ================= */
 * {
   margin: 0;
@@ -276,8 +277,15 @@ body {
   align-items: center;
 }
 
-.bg-logo {
+/* ocultos por defecto (mobile primero) */
+.bg-logo,
+.logo-center,
+.logo-center img {
   display: none;
+}
+
+/* logo fondo */
+.bg-logo {
   position: absolute;
   inset: 0;
   margin: auto;
@@ -289,6 +297,7 @@ body {
   z-index: 1;
 }
 
+/* cards */
 .card {
   position: relative;
   z-index: 2;
@@ -343,11 +352,7 @@ body {
   background: linear-gradient(145deg, #111, #1a1a1a);
   color: #fff;
   transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 20px;
 }
 
 .infoTitle {
@@ -363,19 +368,7 @@ body {
   text-align: justify;
 }
 
-.logo-center {
-  grid-column: span 2;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-}
-
-.logo-center img {
-  width: 120px;
-  opacity: 0.7;
-  animation: floatLogo 4s ease-in-out infinite;
-}
-
+/* animación logo */
 @keyframes floatLogo {
   0%, 100% {
     transform: translateY(0);
@@ -384,27 +377,31 @@ body {
     transform: translateY(-8px);
   }
 }
+/* ================= BREAKPOINT EXISTENTE ================= */
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
   }
-  .logo-center {
-    grid-column: span 1;
-  }
   .card {
     height: 240px;
   }
+}
+/* ================= DESDE 769px EN ADELANTE ================= */
+@media (min-width: 769px) {
   .bg-logo {
-    display: inline;
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 55%;
-    max-width: 500px;
-    opacity: 0.05;
-    filter: blur(2px);
-    pointer-events: none;
-    z-index: 1;
+    display: block;
+  }
+  .logo-center {
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
+    z-index: 2;
+  }
+  .logo-center img {
+    display: block;
+    width: 120px;
+    opacity: 0.7;
+    animation: floatLogo 4s ease-in-out infinite;
   }
 }
 /* ================= CTA ================= */
