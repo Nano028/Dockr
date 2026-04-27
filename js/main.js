@@ -1,10 +1,10 @@
 /* ===============================
-   DOCKR - SCRIPT.JS (MEJORADO)
+   DOCKR - SCRIPT.JS
 =============================== */
 
 /* Reveal on scroll */
 const revealItems = document.querySelectorAll(
-  ".pain-card, .benefit-card, .case-card, .price-card, .steps-grid article, .contact-form, .contact-copy",
+  ".pain-card, .benefit-card, .case-card, .price-card, .payment-card, .steps-grid article, .contact-form, .contact-copy",
 );
 
 const observer = new IntersectionObserver(
@@ -16,9 +16,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.15,
-  },
+  { threshold: 0.15 },
 );
 
 revealItems.forEach((item) => {
@@ -30,14 +28,13 @@ revealItems.forEach((item) => {
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    header.style.borderBottom = "1px solid rgba(255,255,255,.08)";
-  } else {
-    header.style.borderBottom = "1px solid rgba(255,255,255,.04)";
-  }
+  header.style.borderBottom =
+    window.scrollY > 10
+      ? "1px solid rgba(255,255,255,.08)"
+      : "1px solid rgba(255,255,255,.04)";
 });
 
-/* Formulario profesional temporal */
+/* Form submit UX */
 const form = document.querySelector(".contact-form");
 
 if (form) {
@@ -45,23 +42,20 @@ if (form) {
     e.preventDefault();
 
     const button = form.querySelector("button");
-    const originalText = button.innerText;
+    const original = button.innerText;
 
     button.innerText = "Enviado ✓";
     button.disabled = true;
 
     setTimeout(() => {
-      button.innerText = originalText;
+      button.innerText = original;
       button.disabled = false;
       form.reset();
     }, 2200);
   });
 }
 
-/* =====================================
-   HERO MOCKUP THEMES ROTATIVOS
-===================================== */
-
+/* Mockup rotating themes */
 const phoneMock = document.querySelector(".phone-front");
 
 if (phoneMock) {
@@ -79,3 +73,23 @@ if (phoneMock) {
     phoneMock.classList.add(themes[current]);
   }, 3200);
 }
+
+/* ===============================
+   FAQ ACCORDION
+=============================== */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const button = item.querySelector(".faq-question");
+
+  button.addEventListener("click", () => {
+    const isActive = item.classList.contains("active");
+
+    faqItems.forEach((faq) => faq.classList.remove("active"));
+
+    if (!isActive) {
+      item.classList.add("active");
+    }
+  });
+});

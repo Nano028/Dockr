@@ -1,7 +1,11 @@
-/* ===============================
-   DOCKR - STYLE.CSS
-=============================== */
+/* ==================================================
+   DOCKR - MAIN.CSS
+   Mobile First + FAQ Integrado
+================================================== */
 
+/* ===============================
+   ROOT
+=============================== */
 :root {
   --bg: #0a0a0a;
   --bg-2: #111111;
@@ -21,6 +25,9 @@
   --container: 1180px;
 }
 
+/* ===============================
+   RESET
+=============================== */
 * {
   margin: 0;
   padding: 0;
@@ -53,20 +60,28 @@ ul {
   list-style: none;
 }
 
-.container {
-  width: 92%;
-  max-width: var(--container);
-  margin: auto;
-}
-
-section {
-  padding: 90px 0;
+button,
+input,
+textarea {
+  font-family: inherit;
 }
 
 /* ===============================
-   GENERALES
+   LAYOUT
 =============================== */
+.container {
+  width: 92%;
+  max-width: var(--container);
+  margin-inline: auto;
+}
 
+section {
+  padding: 72px 0;
+}
+
+/* ===============================
+   GENERAL
+=============================== */
 .tag {
   display: inline-block;
   padding: 8px 14px;
@@ -82,25 +97,35 @@ section {
 .section-head {
   text-align: center;
   max-width: 760px;
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
 }
 
 .section-head h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 7vw, 3rem);
   line-height: 1.1;
   margin-bottom: 14px;
 }
 
-.section-head p {
+.section-head p,
+.hero-copy p,
+.contact-copy p,
+.pain-card p,
+.benefit-card p,
+.case-card p,
+.payment-card p {
   color: var(--muted);
 }
 
+/* ===============================
+   BUTTONS
+=============================== */
 .btn-main,
 .btn-outline,
 .btn-nav {
+  width: 100%;
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   padding: 14px 24px;
   border-radius: 14px;
@@ -109,8 +134,8 @@ section {
 }
 
 .btn-main {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 }
 
 .btn-main:hover {
@@ -118,25 +143,23 @@ section {
   box-shadow: 0 12px 30px rgba(139, 92, 246, 0.28);
 }
 
-.btn-outline {
+.btn-outline,
+.btn-nav {
   border: 1px solid var(--line);
 }
 
 .btn-outline:hover,
 .btn-nav:hover {
   background: rgba(255, 255, 255, 0.04);
-  transform: translateY(-2px);
 }
 
 .btn-nav {
   padding: 12px 18px;
-  border: 1px solid var(--line);
 }
 
 /* ===============================
    HEADER
 =============================== */
-
 .header {
   position: sticky;
   top: 0;
@@ -147,27 +170,25 @@ section {
 }
 
 .nav {
-  min-height: 78px;
+  min-height: 72px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  letter-spacing: 0.02em;
 }
 
 .menu {
-  display: flex;
+  display: none;
   gap: 24px;
 }
 
 .menu a {
   color: #d4d4d8;
-  transition: 0.25s;
 }
 
 .menu a:hover {
@@ -177,35 +198,37 @@ section {
 /* ===============================
    HERO
 =============================== */
-
 .hero {
-  padding-top: 70px;
-  position: relative;
+  padding-top: 60px;
   overflow: hidden;
+  position: relative;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   background: radial-gradient(circle, var(--primary), transparent 70%);
   filter: blur(80px);
-  opacity: 0.25;
-  top: -120px;
-  right: -120px;
+  opacity: 0.22;
+  top: -100px;
+  right: -100px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.hero-copy {
+  text-align: center;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-size: clamp(2.2rem, 10vw, 4.8rem);
   line-height: 1.02;
   margin-bottom: 18px;
 }
@@ -215,31 +238,30 @@ section {
 }
 
 .hero-copy p {
-  color: var(--muted);
-  font-size: 1.08rem;
-  max-width: 640px;
-  margin-bottom: 28px;
+  max-width: 620px;
+  margin: 0 auto 26px;
 }
 
 .hero-actions {
   display: flex;
+  flex-direction: column;
   gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hero-copy small {
   color: #7c7c84;
 }
 
-/* Mockup */
-
+/* ===============================
+   MOCKUP
+=============================== */
 .hero-visual {
-  position: relative;
-  min-height: 520px;
+  min-height: 380px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .phone {
@@ -247,12 +269,13 @@ section {
   height: 560px;
   border-radius: 34px;
   position: absolute;
+  transform: scale(0.72);
 }
 
 .phone-back {
   background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
   border: 1px solid var(--line);
-  transform: translate(70px, 35px) rotate(10deg);
+  transform: scale(0.72) translate(70px, 35px) rotate(10deg);
   opacity: 0.55;
 }
 
@@ -263,26 +286,27 @@ section {
   box-shadow: var(--shadow);
 }
 
-.mock-header {
-  width: 42%;
+.mock-header,
+.mock-line {
   height: 10px;
-  margin: 0 auto 28px;
   border-radius: 999px;
   background: #222;
+}
+
+.mock-header {
+  width: 42%;
+  margin: 0 auto 28px;
 }
 
 .mock-avatar {
   width: 90px;
   height: 90px;
-  border-radius: 50%;
   margin: 0 auto 18px;
+  border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
 }
 
 .mock-line {
-  height: 10px;
-  border-radius: 999px;
-  background: #222;
   margin-bottom: 12px;
 }
 
@@ -293,8 +317,8 @@ section {
 
 .mock-btn {
   height: 52px;
-  border-radius: 14px;
   margin-top: 18px;
+  border-radius: 14px;
   background: linear-gradient(135deg, #1d1d1d, #141414);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -302,92 +326,56 @@ section {
 /* ===============================
    GRIDS
 =============================== */
-
 .pain-grid,
 .benefits-grid,
 .cases-grid,
 .pricing-grid,
-.steps-grid {
+.steps-grid,
+.payments-grid,
+.contact-grid,
+.faq-grid {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
-}
-.cases-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-.pain-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.benefits-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.pricing-grid {
-  grid-template-columns: repeat(3, 1fr);
-  align-items: stretch;
-}
-
-.steps-grid {
-  grid-template-columns: repeat(4, 1fr);
 }
 
 /* ===============================
    CARDS
 =============================== */
-
 .pain-card,
 .benefit-card,
 .case-card,
 .price-card,
+.payment-card,
 .steps-grid article,
-.contact-form {
+.contact-form,
+.faq-item {
   background: linear-gradient(145deg, #141414, #0f0f0f);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 28px;
 }
 
-.pain-card h3,
-.benefit-card h3,
-.case-card h3 {
-  margin-bottom: 10px;
-}
-
-.pain-card p,
-.benefit-card p,
-.case-card p {
-  color: var(--muted);
-}
-
-.case-card {
+.case-card,
+.price-card,
+.payment-card {
   transition: 0.3s ease;
 }
 
-.case-card:hover {
+.case-card:hover,
+.payment-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-/* ===============================
-   PRICING
-=============================== */
-
-.price-card {
-  position: relative;
-  transition: 0.3s ease;
 }
 
 .price-card:hover {
   transform: translateY(-8px);
 }
 
-.price-card.featured {
-  border-color: rgba(167, 139, 250, 0.4);
-  transform: scale(1.03);
-}
-
-.price-card.featured:hover {
-  transform: scale(1.03) translateY(-8px);
+/* ===============================
+   PRICING
+=============================== */
+.price-card {
+  position: relative;
 }
 
 .badge {
@@ -426,7 +414,6 @@ section {
 
 .price-card li {
   padding: 10px 0;
-  color: #ddd;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -435,27 +422,72 @@ section {
 }
 
 /* ===============================
-   CONTACTO
+   FAQ
 =============================== */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: start;
+.faq-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  gap: 16px;
 }
 
-.contact-copy h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.08;
-  margin-bottom: 14px;
+.faq-item {
+  padding: 0;
+  overflow: hidden;
+  transition: 0.28s ease;
 }
 
-.contact-copy p {
+.faq-item:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.faq-item.active {
+  border-color: rgba(167, 139, 250, 0.34);
+  box-shadow: 0 14px 40px rgba(139, 92, 246, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.faq-question span {
+  color: var(--primary-2);
+  font-size: 1.35rem;
+  transition: 0.28s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  padding: 0 22px 22px;
   color: var(--muted);
-  margin-bottom: 22px;
 }
 
+.faq-item.active .faq-answer {
+  max-height: 240px;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* ===============================
+   CONTACT
+=============================== */
 .contact-form {
   display: grid;
   gap: 16px;
@@ -469,8 +501,6 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: #0d0d0d;
   color: #fff;
-  outline: none;
-  font-family: inherit;
 }
 
 .contact-form textarea {
@@ -481,7 +511,6 @@ section {
 /* ===============================
    FOOTER
 =============================== */
-
 .footer {
   padding: 34px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -489,195 +518,114 @@ section {
 
 .footer-wrap {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-}
-
-.footer p {
-  color: #8a8a92;
-}
-
-.footer-links {
-  display: flex;
+  flex-direction: column;
   gap: 18px;
-}
-
-.footer-links a {
-  color: #bcbcc4;
-}
-
-/* ===============================
-   REVEAL
-=============================== */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: all 0.65s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: none;
+  align-items: center;
+  text-align: center;
 }
 
 /* ===============================
    RESPONSIVE
 =============================== */
 
-@media (max-width: 992px) {
-  .menu {
-    display: none;
-  }
-
-  .hero-grid,
-  .contact-grid,
-  .pricing-grid,
-  .pain-grid,
-  .benefits-grid,
-  .cases-grid,
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    text-align: center;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-copy p {
-    margin-inline: auto;
-  }
-
-  .hero-visual {
-    min-height: 420px;
-  }
-
-  .phone {
-    transform: scale(0.85);
-  }
-
-  .price-card.featured,
-  .price-card.featured:hover {
-    transform: none;
-  }
-
-  .footer-wrap {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 576px) {
-  section {
-    padding: 72px 0;
-  }
-
-  .hero-copy h1 {
-    font-size: 2.4rem;
-  }
-
+@media (min-width: 576px) {
   .btn-main,
   .btn-outline,
   .btn-nav {
-    width: 100%;
+    width: auto;
   }
 
   .hero-actions {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .phone {
-    transform: scale(0.72);
+  .faq-question,
+  .faq-answer p {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
-/* =====================================
-   HERO MOCKUP THEMES ANIMADOS
-===================================== */
+@media (min-width: 768px) {
+  section {
+    padding: 90px 0;
+  }
 
-.phone-front {
-  transition:
-    background 0.8s ease,
-    border-color 0.8s ease,
-    box-shadow 0.8s ease;
+  .benefits-grid,
+  .cases-grid,
+  .payments-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pain-grid,
+  .pricing-grid,
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faq-question {
+    padding: 24px 28px;
+  }
+
+  .faq-answer p {
+    padding: 0 28px 24px;
+  }
 }
 
-/* elementos internos animables */
-.mock-header,
-.mock-avatar,
-.mock-line,
-.mock-btn {
-  transition: all 0.8s ease;
+@media (min-width: 992px) {
+  .menu {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .pain-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .faq-question {
+    padding: 26px 32px;
+  }
+
+  .faq-answer p {
+    padding: 0 32px 26px;
+  }
+
+  .footer-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
-/* =========================
-   THEME 1 - DARK (actual)
-========================= */
-.phone-front.theme-dark {
-  background: #111;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
+@media (min-width: 1200px) {
+  .hero-copy h1 {
+    font-size: 4.8rem;
+  }
 
-.phone-front.theme-dark .mock-header,
-.phone-front.theme-dark .mock-line {
-  background: #222;
-}
-
-.phone-front.theme-dark .mock-btn {
-  background: linear-gradient(135deg, #1d1d1d, #141414);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.phone-front.theme-dark .mock-avatar {
-  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-}
-
-/* =========================
-   THEME 2 - LIGHT
-========================= */
-.phone-front.theme-light {
-  background: #f8f8f8;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
-}
-
-.phone-front.theme-light .mock-header,
-.phone-front.theme-light .mock-line {
-  background: #d8d8d8;
-}
-
-.phone-front.theme-light .mock-btn {
-  background: linear-gradient(135deg, #ffffff, #ececec);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.phone-front.theme-light .mock-avatar {
-  background: linear-gradient(135deg, #111111, #555555);
-}
-
-/* =========================
-   THEME 3 - BLUE
-========================= */
-.phone-front.theme-blue {
-  background: linear-gradient(180deg, #0f172a, #111827);
-  border: 1px solid rgba(96, 165, 250, 0.22);
-  box-shadow: 0 18px 50px rgba(59, 130, 246, 0.18);
-}
-
-.phone-front.theme-blue .mock-header,
-.phone-front.theme-blue .mock-line {
-  background: rgba(148, 163, 184, 0.22);
-}
-
-.phone-front.theme-blue .mock-btn {
-  background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
-  border: 1px solid rgba(147, 197, 253, 0.18);
-}
-
-.phone-front.theme-blue .mock-avatar {
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  .faq-grid {
+    max-width: 920px;
+  }
 }
