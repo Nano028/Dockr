@@ -264,6 +264,15 @@ body {
   transform: translate(-50%, -50%) scale(1.08);
 }
 
+.parrafo {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.parrafo-txt-bold {
+  font-weight: bolder;
+}
+
 /* ================= CARDS ================= */
 .cards {
   position: relative;
