@@ -1,0 +1,34 @@
+/* ================= MULTIMEDIA ================= */
+
+.multimedia {
+  padding: 40px 0;
+}
+
+.media {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+}
+
+.media.spotify iframe {
+  width: 100%;
+  height: 152px;
+  border: none;
+}
+
+.media.youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.media.youtube iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

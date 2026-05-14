@@ -1,0 +1,631 @@
+/* ==================================================
+   DOCKR - MAIN.CSS
+   Mobile First + FAQ Integrado
+================================================== */
+
+/* ===============================
+   ROOT
+=============================== */
+:root {
+  --bg: #0a0a0a;
+  --bg-2: #111111;
+  --card: #171717;
+  --line: rgba(255, 255, 255, 0.08);
+
+  --text: #ffffff;
+  --muted: #a1a1aa;
+
+  --primary: #8b5cf6;
+  --primary-2: #a78bfa;
+  --primary-dark: #6d28d9;
+
+  --radius: 22px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+
+  --container: 1180px;
+}
+
+/* ===============================
+   RESET
+=============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* ===============================
+   LAYOUT
+=============================== */
+.container {
+  width: 92%;
+  max-width: var(--container);
+  margin-inline: auto;
+}
+
+section {
+  padding: 72px 0;
+}
+
+/* ===============================
+   GENERAL
+=============================== */
+.tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cfcfcf;
+  margin-bottom: 18px;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.section-head p,
+.hero-copy p,
+.contact-copy p,
+.pain-card p,
+.benefit-card p,
+.case-card p,
+.payment-card p {
+  color: var(--muted);
+}
+
+/* ===============================
+   BUTTONS
+=============================== */
+.btn-main,
+.btn-outline,
+.btn-nav {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.28s ease;
+}
+
+.btn-main {
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.28);
+}
+
+.btn-outline,
+.btn-nav {
+  border: 1px solid var(--line);
+}
+
+.btn-outline:hover,
+.btn-nav:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-nav {
+  padding: 12px 18px;
+}
+
+/* ===============================
+   HEADER
+=============================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background: rgba(10, 10, 10, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.menu {
+  display: none;
+  gap: 24px;
+}
+
+.menu a {
+  color: #d4d4d8;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* ===============================
+   HERO
+=============================== */
+.hero {
+  padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary), transparent 70%);
+  filter: blur(80px);
+  opacity: 0.22;
+  top: -100px;
+  right: -100px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.hero-copy {
+  text-align: center;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.2rem, 10vw, 4.8rem);
+  line-height: 1.02;
+  margin-bottom: 18px;
+}
+
+.hero-copy h1 span {
+  color: var(--primary-2);
+}
+
+.hero-copy p {
+  max-width: 620px;
+  margin: 0 auto 26px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.hero-copy small {
+  color: #7c7c84;
+}
+
+/* ===============================
+   MOCKUP
+=============================== */
+.hero-visual {
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phone {
+  width: 290px;
+  height: 560px;
+  border-radius: 34px;
+  position: absolute;
+  transform: scale(0.72);
+}
+
+.phone-back {
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  border: 1px solid var(--line);
+  transform: scale(0.72) translate(70px, 35px) rotate(10deg);
+  opacity: 0.55;
+}
+
+.phone-front {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.mock-header,
+.mock-line {
+  height: 10px;
+  border-radius: 999px;
+  background: #222;
+}
+
+.mock-header {
+  width: 42%;
+  margin: 0 auto 28px;
+}
+
+.mock-avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+}
+
+.mock-line {
+  margin-bottom: 12px;
+}
+
+.mock-line.short {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.mock-btn {
+  height: 52px;
+  margin-top: 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1d1d1d, #141414);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===============================
+   GRIDS
+=============================== */
+.pain-grid,
+.benefits-grid,
+.cases-grid,
+.pricing-grid,
+.steps-grid,
+.payments-grid,
+.contact-grid,
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* ===============================
+   CARDS
+=============================== */
+.pain-card,
+.benefit-card,
+.case-card,
+.price-card,
+.payment-card,
+.steps-grid article,
+.contact-form,
+.faq-item {
+  background: linear-gradient(145deg, #141414, #0f0f0f);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.case-card,
+.price-card,
+.payment-card {
+  transition: 0.3s ease;
+}
+
+.case-card:hover,
+.payment-card:hover {
+  transform: translateY(-6px);
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===============================
+   PRICING
+=============================== */
+.price-card {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 12px 0 4px;
+}
+
+.price span {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.price-card small {
+  color: #8d8d96;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.price-card ul {
+  margin: 20px 0 28px;
+}
+
+.price-card li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-card li:last-child {
+  border-bottom: none;
+}
+
+/* ===============================
+   FAQ
+=============================== */
+.faq-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.faq-item {
+  padding: 0;
+  overflow: hidden;
+  transition: 0.28s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.faq-item.active {
+  border-color: rgba(167, 139, 250, 0.34);
+  box-shadow: 0 14px 40px rgba(139, 92, 246, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.faq-question span {
+  color: var(--primary-2);
+  font-size: 1.35rem;
+  transition: 0.28s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  padding: 0 22px 22px;
+  color: var(--muted);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 240px;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* ===============================
+   CONTACT
+=============================== */
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+.footer {
+  padding: 34px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  text-align: center;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (min-width: 576px) {
+  .btn-main,
+  .btn-outline,
+  .btn-nav {
+    width: auto;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .faq-question,
+  .faq-answer p {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 90px 0;
+  }
+
+  .benefits-grid,
+  .cases-grid,
+  .payments-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pain-grid,
+  .pricing-grid,
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faq-question {
+    padding: 24px 28px;
+  }
+
+  .faq-answer p {
+    padding: 0 28px 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .pain-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .faq-question {
+    padding: 26px 32px;
+  }
+
+  .faq-answer p {
+    padding: 0 32px 26px;
+  }
+
+  .footer-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-copy h1 {
+    font-size: 4.8rem;
+  }
+
+  .faq-grid {
+    max-width: 920px;
+  }
+}
