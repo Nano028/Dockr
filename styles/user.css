@@ -492,4 +492,13 @@ body.theme-apneuma {
   --bg: #000000;
   --hero-bg: url("../apneuma/assets/nombre2.png");
   --hero-size: 25vw;
+}
+
+/* El Asilo  */
+body.theme-EADLB {
+  --accent: #282828;
+  --text: #f8f8f8;
+  --bg: #000000;
+  --hero-bg: url("https://lh3.googleusercontent.com/d/1VdO6YqgRD1DIBAczze-YTlvarxfZ821R ");
+  --hero-size: 25vw;
 }/*# sourceMappingURL=user.css.map */
