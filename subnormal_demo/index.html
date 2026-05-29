@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SubNorMal | Dockr</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/user.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  </head>
+
+  <body class="theme-subnormal">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-images">
+          <img class="hero-img active" id="img1" src="./assets/icono.png" alt="Subnormal" />
+         <img
+            class="hero-img"
+            id="img2"
+            src="./assets/hero.png"
+            alt="mg Logo"
+          /> 
+        </div>
+        <h1>SubNorMal</h1>
+        <p></p>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="links container">
+      <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com">
+        <span>Spotify</span>
+        <img src="./assets/icono.png" />
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com">
+        <span>YouTube</span>
+        <img src="./assets/icono.png" alt="" />
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com">
+        <span>Instagram</span>
+        <img src="./assets/icono.png" alt="" />
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com">
+        <span>TikTok</span>
+        <img src="./assets/icono.png" alt="" />
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com">
+        <span>Facebook</span>
+        <img src="./assets/icono.png" alt="" />
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://www.whatsapp.com/">
+        <span>Whatsapp</span>
+        <img src="./assets/icono.png" alt="" />
+      </a>
+    </section>
+
+    <!-- MULTIMEDIA -->
+    <section class="multimedia">
+      <!-- SPOTIFY -->
+      <section class="container fade">
+        <div class="media spotify">
+          <iframe
+            src="https://open.spotify.com/embed/artist/2s5SGkXNOW0ctBwAQAZ2G7?utm_source=generator"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- YOUTUBE -->
+      <section class="container fade">
+        <div class="media youtube">
+          <iframe
+            src="https://www.youtube.com/embed/DPXwSVIaPUc"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    
+    <!-- GALERÍA -->
+    <section class="galeria">
+      <div class="carousel">
+        <div class="carousel-item prev">
+          <img src="https://lh3.googleusercontent.com/d/1wxyoKxF0DLF2hMDo4jxB4E_A9KpI2eb9" />
+        </div>
+
+        <div class="carousel-item active">
+          <img src="https://lh3.googleusercontent.com/d/1-kPMLVhEM95I6eCXU8vmKYllG_gBZ23u" />
+        </div>
+
+        <div class="carousel-item next">
+          <img src="https://lh3.googleusercontent.com/d/1cLdTmQmljMja2aqzDuncwL7xk3ZPzY5V" />
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section class="parrafo">
+        <h1></h1>
+        <span class="parrafo-txt parrafo-txt-bold">Subnormal</span>
+        <span class="parrafo-txt"> es una banda local de nu metal originaria de Uruguay que fusiona la pesadez de las guitarras con un enfoque urbano y alternativo.</span>
+      </div>
+    </section>
+    
+    <!-- CARDS -->
+    <section class="cards">
+      <img src="assets/hero.png" class="bg-logo" alt="" />
+      
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://lh3.googleusercontent.com/d/1MDPclQmuc59XlNoo8P0aKbRHv4qXGu9b" alt="Card1" />
+          </div>
+          <div class="card-back">
+            <div class="infoTitle">Voz - Leandro Medero</div>
+            <div class="info"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://lh3.googleusercontent.com/d/1bQipSoBdf2eymGz3NPfbvxlb5Pcyd3hj" alt="Card2" />
+          </div>
+          <div class="card-back">
+            <div class="infoTitl">Guitarra - Joaco Núñez</div>
+            <div class="info"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="logo-center">
+        <img src="assets/icono.png" alt="logo" />
+      </div>
+      
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://lh3.googleusercontent.com/d/1xkZxFkXh_k24rISQGrcAMKhNRMhlibDS" alt="Card3" />
+          </div>
+          <div class="card-back">
+            <div class="infoTitle">Bajo - Romina Goycoechea</div>
+            <div class="info"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://lh3.googleusercontent.com/d/1m_jcbRU7DBrR9UvhaKeTFzSVxN7NlC62" alt="Card4" />
+          </div>
+          <div class="card-back">
+            <div class="infoTitle">Batería - Gastón Lorenzo</div>
+            <div class="info"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta-client">
+        <h2>Sígue y entérate de lo que se viene.</h2>
+        <a href="https://www.instagram.com"
+          >Seguir a Subnormal</a
+        >
+      </div>
+
+      <div class="cta-product">
+        <p>Este sitio funciona con <strong>Dockr</strong>.</p>
+        <a href="../index.html">Quiero mi Dockr</a>
+      </div>
+
+      <div class="cta-brand">
+        <span>Creado por Nano Web Design</span>
+      </div>
+    </section>
+    <script src="../js/user.js"></script>
+  </body>
+</html>

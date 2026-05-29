@@ -300,7 +300,7 @@ body {
   margin: auto;
   width: 55%;
   max-width: 500px;
-  opacity: 0.05;
+  opacity: 0.15;
   filter: blur(2px);
   pointer-events: none;
   z-index: 1;
@@ -495,10 +495,10 @@ body.theme-apneuma {
 }
 
 /* El Asilo  */
-body.theme-EADLB {
+body.theme-subnormal {
   --accent: #282828;
   --text: #f8f8f8;
   --bg: #000000;
-  --hero-bg: url("https://lh3.googleusercontent.com/d/1VdO6YqgRD1DIBAczze-YTlvarxfZ821R ");
+  --hero-bg: url("../subnormal_demo/assets/hero.png");
   --hero-size: 25vw;
 }/*# sourceMappingURL=user.css.map */
