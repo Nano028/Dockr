@@ -24,11 +24,20 @@ body.theme-apneuma {
   --hero-size: 25vw;
 }
 
-/* El Asilo  */
+/* Subnormal  */
 body.theme-subnormal {
   --accent: #282828;
   --text: #f8f8f8;
   --bg: #000000;
   --hero-bg: url("../subnormal_demo/assets/hero.png");
+  --hero-size: 25vw;
+}
+
+/* Nacho Pintos  */
+body.theme-nachopintos {
+  --accent: #a78080;
+  --text: #3b1313;
+  --bg: #d0d0d0;
+  --hero-bg: url("../nachopintos/assets/hero.jpg");
   --hero-size: 25vw;
 }/*# sourceMappingURL=themes.css.map */

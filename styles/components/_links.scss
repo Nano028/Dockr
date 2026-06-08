@@ -11,7 +11,7 @@
   position: relative;
   padding: 18px;
   border-radius: 14px;
-  background: linear-gradient(145deg, #111, #323232);
+  background: linear-gradient(145deg, var(--accent), #323232);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -42,12 +42,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transform: translateX(-100%);
 }
 
