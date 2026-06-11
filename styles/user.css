@@ -49,7 +49,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--hero-bg) center/contain no-repeat;
+  background: var(--hero-bg) center/cover no-repeat;
   transform: scale(1.2);
   animation: zoomHero 20s infinite alternate ease-in-out;
   filter: brightness(0.17);
@@ -491,7 +491,7 @@ body.theme-knockboard {
   --accent: #000000;
   --text: #f8f8f8;
   --bg: #000000;
-  --hero-bg: url("../knockboard/assets/KB.png");
+  --hero-bg: url("../knockboard/assets/backgroundHero.png");
   --hero-size: 25vw;
 }
 
@@ -507,7 +507,7 @@ body.theme-apneuma {
   --accent: #282828;
   --text: #f8f8f8;
   --bg: #000000;
-  --hero-bg: url("../apneuma/assets/nombre2.png");
+  --hero-bg: url("../apneuma/assets/backgroundHero.png");
   --hero-size: 25vw;
 }
 
@@ -523,7 +523,7 @@ body.theme-subnormal {
 /* Nacho Pintos  */
 body.theme-nachopintos {
   --accent: #a78080;
-  --text: #3b1313;
+  --text: #843b3b;
   --bg: #d0d0d0;
   --hero-bg: url("../nachopintos/assets/hero.jpg");
   --hero-size: 25vw;
