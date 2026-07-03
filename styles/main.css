@@ -18,7 +18,6 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-
   background:
     radial-gradient(circle at top right, #ede4ff 0%, transparent 30%),
     radial-gradient(circle at bottom left, #f4ecff 0%, transparent 30%), #ffffff;
@@ -41,24 +40,16 @@ button {
 .navbar {
   width: 100%;
   max-width: 1240px;
-
   margin: 0 auto;
-
   padding: 24px 32px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: sticky;
   top: 0;
-
   z-index: 100;
-
   backdrop-filter: blur(14px);
-
   background: rgba(255, 255, 255, 0.72);
-
   border-bottom: 1px solid rgba(229, 231, 235, 0.6);
 }
 
@@ -66,23 +57,18 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-
   font-size: 1.5rem;
   font-weight: 800;
 }
 
 .logo-box {
-  width: 42px;
-  height: 42px;
-
+  width: 78px;
+  height: 78px;
   border-radius: 12px;
-
-  background: linear-gradient(135deg, #6d4aff, #9b7dff);
-
+  background: linear-gradient(135deg, #c4b6f7, #825cff);
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: white;
   font-weight: 700;
 }
@@ -95,7 +81,6 @@ button {
 .nav-links a {
   color: #374151;
   font-weight: 500;
-
   transition: 0.2s ease;
 }
 
@@ -120,30 +105,22 @@ button {
 
 .btn-primary {
   background: linear-gradient(135deg, #6d4aff, #8b5cf6);
-
   color: white;
-
   padding: 16px 28px;
-
   border-radius: 16px;
-
   font-weight: 700;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   transition:
     transform 0.2s ease,
     opacity 0.2s ease,
     box-shadow 0.2s ease;
-
   box-shadow: 0 10px 30px rgba(109, 74, 255, 0.25);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-
   opacity: 0.95;
 }
 
@@ -153,17 +130,11 @@ button {
 
 .btn-secondary {
   border: 1px solid #d1d5db;
-
   color: #111827;
-
   padding: 16px 28px;
-
   border-radius: 16px;
-
   font-weight: 600;
-
   background: white;
-
   transition: 0.2s ease;
 }
 
@@ -181,40 +152,27 @@ button {
 
 .hero {
   max-width: 1200px;
-
   margin: 0 auto;
-
   padding: 40px 24px 120px;
-
   text-align: center;
 }
 
 .hero-badge {
   display: inline-flex;
-
   padding: 12px 20px;
-
   background: #efe8ff;
-
   border-radius: 999px;
-
   color: #6d4aff;
-
   font-weight: 700;
-
   margin-bottom: 28px;
 }
 
 .hero h1 {
   font-size: 5rem;
   line-height: 1.05;
-
   max-width: 900px;
-
   margin: 0 auto 24px;
-
   font-weight: 800;
-
   letter-spacing: -3px;
 }
 
@@ -224,12 +182,9 @@ button {
 
 .hero-text {
   max-width: 760px;
-
   margin: 0 auto;
-
   font-size: 1.25rem;
   line-height: 1.7;
-
   color: #6b7280;
 }
 
@@ -237,9 +192,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 18px;
-
   margin-top: 40px;
-
   flex-wrap: wrap;
 }
 
@@ -247,11 +200,8 @@ button {
   display: flex;
   justify-content: center;
   gap: 28px;
-
   margin-top: 28px;
-
   color: #6b7280;
-
   flex-wrap: wrap;
 }
 
@@ -263,42 +213,30 @@ button {
   display: flex;
   justify-content: center;
   gap: 16px;
-
   margin-top: 60px;
   margin-bottom: 28px;
-
   flex-wrap: wrap;
 }
 
 .dockr-btn {
   border: none;
-
   padding: 14px 22px;
-
   border-radius: 14px;
-
   background: white;
-
   border: 1px solid #e5e7eb;
-
   cursor: pointer;
-
   font-weight: 600;
-
   transition: 0.2s ease;
 }
 
 .dockr-btn:hover {
   transform: translateY(-2px);
-
   border-color: #c4b5fd;
 }
 
 .dockr-btn.active {
   background: linear-gradient(135deg, #6d4aff, #8b5cf6);
-
   color: white;
-
   border-color: transparent;
 }
 
@@ -309,29 +247,19 @@ button {
 .dockr-preview-wrapper {
   width: 100%;
   max-width: 430px;
-
   margin: 0 auto;
-
   background: #2f2f2f;
-
   border-radius: 36px;
-
   padding: 18px;
-
   box-shadow: 0 20px 60px rgba(109, 74, 255, 0.15);
-
   border: 1px solid #9c9c9c;
 }
 
 .dockr-preview-header {
   text-align: center;
-
   margin-bottom: 14px;
-
   font-size: 0.9rem;
-
   color: #d1d5db;
-
   font-weight: 600;
 }
 
@@ -340,13 +268,9 @@ button {
 .iframe-container {
   width: 100%;
   height: 780px;
-
   overflow: hidden;
-
   border-radius: 26px;
-
   position: relative;
-
   background: #111827;
 }
 
@@ -367,36 +291,27 @@ button {
 
 .features-grid {
   margin-top: 100px;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   gap: 24px;
 }
 
 .feature-card {
   background: rgba(255, 255, 255, 0.75);
-
   backdrop-filter: blur(20px);
-
   padding: 32px;
-
   border-radius: 24px;
-
   border: 1px solid #ececec;
-
   transition: 0.2s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .feature-icon {
   font-size: 2rem;
-
   margin-bottom: 18px;
 }
 
@@ -406,7 +321,6 @@ button {
 
 .feature-card p {
   color: #6b7280;
-
   line-height: 1.7;
 }
 
@@ -416,34 +330,24 @@ button {
 
 .pricing-section {
   margin-top: 120px;
-
   text-align: center;
 }
 
 .pricing-badge {
   display: inline-flex;
-
   padding: 12px 20px;
-
   background: #efe8ff;
-
   border-radius: 999px;
-
   color: #6d4aff;
-
   font-weight: 700;
-
   margin-bottom: 24px;
 }
 
 .pricing-section h2 {
   font-size: 4rem;
   line-height: 1.1;
-
   margin-bottom: 20px;
-
   font-weight: 800;
-
   letter-spacing: -2px;
 }
 
@@ -453,40 +357,27 @@ button {
 
 .pricing-text {
   max-width: 720px;
-
   margin: 0 auto;
-
   color: #6b7280;
-
   font-size: 1.1rem;
   line-height: 1.8;
 }
 
 .pricing-card {
   max-width: 520px;
-
   margin: 60px auto 0;
-
   background: rgba(255, 255, 255, 0.82);
-
   backdrop-filter: blur(20px);
-
   border-radius: 36px;
-
   padding: 48px;
-
   border: 1px solid #ececec;
-
   box-shadow: 0 20px 60px rgba(109, 74, 255, 0.12);
 }
 
 .pricing-top h3 {
   font-size: 1.2rem;
-
   margin-bottom: 24px;
-
   color: #6b7280;
-
   font-weight: 700;
 }
 
@@ -494,67 +385,49 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-
   gap: 10px;
 }
 
 .price-number {
   font-size: 6rem;
   line-height: 1;
-
   font-weight: 800;
-
   color: #111827;
 }
 
 .price-currency {
   font-size: 1.5rem;
-
   font-weight: 700;
-
   margin-top: 12px;
-
   color: #7c5cff;
 }
 
 .price-period {
   display: block;
-
   margin-top: 10px;
-
   color: #6b7280;
-
   font-size: 1rem;
 }
 
 .pricing-features {
   margin-top: 40px;
-
   display: flex;
   flex-direction: column;
-
   gap: 18px;
-
   text-align: left;
 }
 
 .pricing-item {
   padding: 18px 22px;
-
   border-radius: 16px;
-
   background: #fafafa;
-
   border: 1px solid #eeeeee;
-
   font-weight: 600;
-
   color: #374151;
 }
 
 .pricing-btn {
   width: 100%;
-
   margin-top: 40px;
 }
 
@@ -564,31 +437,23 @@ button {
 
 .bottom-cta {
   margin-top: 120px;
-
   padding: 60px;
-
   border-radius: 36px;
-
   background: linear-gradient(135deg, rgba(109, 74, 255, 0.08), rgba(155, 125, 255, 0.12));
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 40px;
 }
 
 .bottom-cta h2 {
   font-size: 2.5rem;
-
   margin-bottom: 16px;
 }
 
 .bottom-cta p {
   color: #6b7280;
-
   line-height: 1.7;
-
   max-width: 620px;
 }
 
@@ -598,11 +463,8 @@ button {
 
 .branding-text {
   text-align: center;
-
   margin-top: 60px;
-
   color: #6b7280;
-
   font-size: 0.9rem;
 }
 
@@ -626,12 +488,9 @@ button {
 
   .mobile-menu-btn {
     display: block;
-
     background: none;
     border: none;
-
     font-size: 2rem;
-
     cursor: pointer;
   }
 }
@@ -661,9 +520,7 @@ button {
 
   .bottom-cta {
     flex-direction: column;
-
     text-align: center;
-
     padding: 40px 28px;
   }
 
