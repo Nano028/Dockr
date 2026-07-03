@@ -540,3 +540,9 @@ button {
     height: 700px;
   }
 }
+
+#features,
+#preview,
+#pricing {
+  scroll-margin-top: 150px;
+}
